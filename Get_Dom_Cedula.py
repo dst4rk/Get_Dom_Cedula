@@ -43,10 +43,10 @@ def results(url,cedula):
         print('Foto:', foto)
 
 def options():
-    parser = argparse.ArgumentParser(description="Herramienta para realizar diferentes opciones con una cadena")
-    parser.add_argument("--iterate", action="store_true", help="Itera a través de todos los 0 hasta llegar a 1000000000")
-    parser.add_argument("--range", type=int, nargs=2, help="Define un rango entre 000000000 y 1000000000")
-    parser.add_argument("--number", type=int, help="Reemplaza 000000000 por la entrada del usuario")
+    parser = argparse.ArgumentParser(description="Herramienta para Enumerar numeros de cedula")
+    parser.add_argument("--all", action="store_true", help="Tratar de listar todas las cedulas posibles")
+    parser.add_argument("--range", type=int, nargs=2, help="Define un rango a listar")
+    parser.add_argument("--number", type=int, help="Lista la informacion para un numero en especifico")
     args = parser.parse_args()
     if args.iterate:
         get_url("http://api.adamix.net/apec/cedula/")
