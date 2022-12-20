@@ -48,7 +48,7 @@ def options():
     parser.add_argument("--range", type=int, nargs=2, help="Define un rango a listar")
     parser.add_argument("--number", type=int, help="Lista la informacion para un numero en especifico")
     args = parser.parse_args()
-    if args.iterate:
+    if args.all:
         get_url("http://api.adamix.net/apec/cedula/")
     elif args.range:
         start,end = args.range
